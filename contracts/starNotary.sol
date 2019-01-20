@@ -103,5 +103,11 @@ Just verify that the owner of _tokenId1 is the one executing the function
 // Write a function to Transfer a Star. The function should transfer a star from the address of the caller.
 // The function should accept 2 arguments, the address to transfer the star to, and the token ID of the star.
 //
+    function transferStar(address _to, uint256 _tokenId) public{
+                
+        _removeTokenFrom(msg.sender, _tokenId);
+        _addTokenTo(_to, _tokenId);
 
+        emit Transfer(msg.sender, _to, _tokenId);
+    }
 }

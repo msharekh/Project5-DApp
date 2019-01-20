@@ -1,5 +1,5 @@
 // Allows us to use ES6 in our migrations and tests.
-var HDWalletProvider = require('truffle-hdwallet-provider');
+// var HDWalletProvider = require('truffle-hdwallet-provider');
 
 require('babel-register');
 
@@ -12,17 +12,18 @@ module.exports = {
       host: '127.0.0.1',
       port: 9545,
       network_id: '*' // Match any network id
-    },
-    rinkeby: {
-      provider: function() {
-        return new HDWalletProvider(
-          'uphold picnic age aunt sheriff embody dune gauge merit hero purse innocent',
-          'https://rinkeby.infura.io/v3/141bd5d2a2d243a7aab8388795ffd2ea'
-        );
-      },
-      network_id: '4',
-      gas: 4500000,
-      gasPrice: 10000000000
     }
+    // ,
+    // rinkeby: {
+    //   provider: function() {
+    //     return new HDWalletProvider(
+    //       'uphold picnic age aunt sheriff embody dune gauge merit hero purse innocent',
+    //       'https://rinkeby.infura.io/v3/141bd5d2a2d243a7aab8388795ffd2ea'
+    //     );
+    //   },
+    //   network_id: '4',
+    //   gas: 4500000,
+    //   gasPrice: 10000000000
+    // }
   }
 };

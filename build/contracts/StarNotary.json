@@ -550,9 +550,9 @@
           }
         ],
         "contractDependencies": [
+          979,
           296,
           306,
-          979,
           1082
         ],
         "contractKind": "contract",
@@ -3729,9 +3729,9 @@
           }
         ],
         "contractDependencies": [
+          979,
           296,
           306,
-          979,
           1082
         ],
         "contractKind": "contract",
@@ -6862,8 +6862,8 @@
     "4447": {
       "events": {},
       "links": {},
-      "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10",
-      "transactionHash": "0xcb290ebc17ec9bbd32a7bce3d9996259db96c5a4468691963e547debc8f4bbf9"
+      "address": "0xe632ecebe91b2a478c9e7faa826cb22443a4ce71",
+      "transactionHash": "0xa2842dd1f7c235c57f3169550c59e298dcb54bb89b6ae49874111ef1f4b34b55"
     },
     "5777": {
       "events": {},
@@ -6873,5 +6873,5 @@
     }
   },
   "schemaVersion": "2.0.2",
-  "updatedAt": "2019-01-20T20:52:52.970Z"
+  "updatedAt": "2019-01-20T22:14:40.857Z"
 }

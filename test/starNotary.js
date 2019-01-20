@@ -77,4 +77,27 @@ it('can set name and set symbol', async () => {
   assert(symbol, await instance.symbol());
 });
 // 2) 2 users can exchange their stars.
+it('2 users can exchange their stars', async () => {
+  //user 1 create and put for sale
+  let user1 = accounts[1];
+  let starId1 = 1;
+  let starPrice1 = web3.toWei(0.01, 'ether');
+  await instance.createStar('awesome star 1', starId1, { from: user1 });
+  await instance.putStarUpForSale(starId1, starPrice1, { from: user1 });
+
+  //user 2 create and put for sale
+  let user2 = accounts[2];
+  let starId2 = 2;
+  let starPrice2 = web3.toWei(0.01, 'ether');
+  await instance.createStar('awesome star 2', starId2, { from: user2 });
+  await instance.putStarUpForSale(starId2, starPrice2, { from: user2 });
+
+  //exchange
+
+  await instance.exchangeStars(starId1, starId2);
+
+  assert.equal(user1, await instance.ownerOf(starId2));
+  assert.equal(user2, await instance.ownerOf(starId1));
+});
+
 // 3) Stars Tokens can be transferred from one address to another.
